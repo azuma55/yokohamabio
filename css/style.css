@@ -1,0 +1,978 @@
+@charset "UTF-8";
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* デザインタイムCSS */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+
+
+		/* デスクトップ用　minを基準幅で */
+		@media screen and (min-width: 960px){
+		}
+		
+		/* モバイル版(iPad横向き以下) 基準幅(デスクトップ用)から手動で-1px*/
+		@media screen and (max-width: 959px){
+		}
+		
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* リンク色 */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+	
+
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* メインレイアウト */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ------------------------------------------------------------ */
+/* 共通設定 */
+/* ------------------------------------------------------------ */
+ul.iconSNS{
+	position:absolute;
+	right:20px;
+	bottom:10px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+ul.iconSNS li{
+	margin-left: 10px;
+}
+
+
+ul.iconSNS li a:hover img{
+	opacity: 0.5;
+}
+
+
+/* ------------------------------------------------------------ */
+/* body */
+/* ------------------------------------------------------------ */
+body{
+	/* ページ内で使用されるインライン系の基本装飾 */
+	color:#4D4D4D;								/* 基本文字色 */
+	font-family: sans-serif;	/* 基本フォント */
+	
+	min-width: 960px;
+}
+
+
+/* ------------------------------------------------------------ */
+/* wrapper */
+/* ------------------------------------------------------------ */
+#wrapper{
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+
+/* ------------------------------ */
+/* .wrapper_breakingOut　(閲覧幅-領域確保)から中央幅を出し、ネガティブマージン化 */
+/* ------------------------------ */
+/* デスクトップ用　minを基準幅で */
+@media screen and (min-width: 960px){
+	html,body{
+		overflow-x: hidden;
+	}
+	#wrapper .wrapper_breakingOut_m {
+		margin-right:  calc((100vw - 100%)/2*-1);
+		margin-left:   calc((100vw - 100%)/2*-1);
+	}
+	#wrapper .wrapper_breakingOut_mp {
+		margin-right:  calc((100vw - 100%)/2*-1);
+		margin-left:   calc((100vw - 100%)/2*-1);
+		padding-right: calc((100vw - 100%)/2);
+		padding-left:  calc((100vw - 100%)/2);
+	}
+}
+
+
+/* 臨時fit対応　タブレット用　2019/03/24 (日) 23:14:36 */
+/* モバイル版(iPad横向き以下) 基準幅(デスクトップ用)から手動で-1px*/
+/*
+@media screen and (max-width: 959px){
+	#wrapper .wrapper_breakingOut_mp {
+		margin-right:  calc((960px - 800px)/2*-1);
+		margin-left:   calc((960px - 800px)/2*-1);
+		padding-right: calc((100vw - 100%)/2);
+		padding-left:  calc((100vw - 100%)/2);
+	}
+}
+*/
+
+
+/* ------------------------------------------------------------ */
+/* header */
+/* ------------------------------------------------------------ */
+#header{
+	border-top: 35px solid #5358A6;
+}
+
+#header_top{
+	border-top: 3px solid #ADDEF8;
+}
+#header_top_inr{
+	position: relative;
+}
+
+#header h1{
+	box-sizing: border-box;
+	padding-top: 12px;
+	height: 90px;
+	font-size: 20px;
+	line-height: 65px;
+	background-color: #FFF;
+}
+#header h1 img{
+	width: 120px;
+	height: auto;
+	margin-right: 16px;
+}
+#header h1 a{
+	display: inline-block;
+	color: #808080;
+	text-decoration: none;
+}
+#header h1 a:hover{
+	text-decoration: underline;
+}
+#header h1 a:hover img{
+	opacity: 0.5;
+}
+
+
+
+
+/* ------------------------------ */
+/* header_nav */
+/* ------------------------------ */
+#header_nav{
+	background-color: #717993;
+}
+
+#header_nav ul{
+	width: 960px;
+	height: 40px;
+			
+  display: flex;
+  justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+#header_nav ul li{
+	list-style: none;
+	margin: 0 2em;
+}
+
+#header_nav ul li:last-child{
+	border-right: none;
+}
+
+#header_nav ul li a{
+	display: block;
+	text-decoration: none;
+	font-size: 16px;
+	color: #FFF;
+}
+#header_nav ul li a:hover{
+	text-decoration: underline;
+}
+
+
+		/* 画像アセットで吸収できなかった位置ずれを調整 */
+		/*
+		#header_nav ul li:nth-child(2){
+			padding-top: 1px;
+		}
+		*/
+
+
+/* ------------------------------------------------------------ */
+/* contents */
+/* ------------------------------------------------------------ */
+#contents{
+	padding: 0 80px;
+/*	padding-bottom: 95px;*/
+}
+#contents a >*:hover{
+	opacity: 0.5;
+}
+
+
+
+
+/* ------------------------------------------------------------ */
+/* footer */
+/* ------------------------------------------------------------ */
+#footer{
+	background-color: #5358A6;
+}
+
+
+#footer_inr{
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+/* ------------------------------ */
+#footer_top{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top: 30px;
+	margin-bottom: 40px;
+	margin-left: 80px;
+	margin-right: 80px;
+}
+
+
+#footer_top h2{
+}
+#footer_top h2 img{
+	display: block;
+	margin-bottom: 12px;
+}
+#footer_top h2 a{
+	display: block;
+	color: #FFF;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+#footer_top h2 a:hover {
+	text-decoration: underline;
+}
+
+#footer_top h2 a:hover img{
+	opacity: 0.5;
+}
+
+
+#footer_top address{
+	font-style: normal;
+	color: #FFF;
+	font-size: 12px;
+	line-height: 1.4;
+	margin-top: 16px;
+}
+
+
+
+
+
+/* ------------------------------ */
+#footer_nav ul{
+  list-style: none;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	
+	margin-top: 16px;
+	font-size: 12px;
+	width: calc(4em*4 + 3em*3);
+}
+#footer_nav ul li{
+	font-size: 12px;
+	margin-right: 3em;
+	margin-bottom: 0.5em;
+	min-width: 4em;
+}
+#footer_nav ul li:nth-child(4n){
+	margin-right: 0em;
+}
+#footer_nav ul li:last-child{
+}
+#footer_nav ul li a{
+	text-decoration: none;
+	color: #BFE3F7;
+}
+#footer_nav ul li a:hover{
+	text-decoration: underline;
+}
+
+
+
+/* ------------------------------ */
+/* コピーライト */
+/* ------------------------------ */
+#footer small{
+	text-align: center;
+	display: block;
+	color: #A0DFFF;
+	padding-bottom: 10px;
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ページ別-0　汎用、共通 */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ------------------------------------------------------------ */
+/* 汎用パーツ */
+/* ------------------------------------------------------------ */
+/* ------------------------------ */
+.sct_h2{
+}
+.sct_h2 h2{
+	height: 62px;
+	font-size: 24px;
+	color: #1D3759;
+	background-color: #D2D9E4;
+	border-bottom: 2px solid #ACB2D6;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	margin-bottom: 58px;
+}
+
+
+
+/* ------------------------------ */
+.sct_h3{
+	margin-left:  calc(80px*-1);
+	margin-right: calc(80px*-1);
+	padding-left:  calc(80px);
+	padding-right: calc(80px);
+	padding-bottom: 55px;
+}
+.sct_h3:nth-of-type(n+2){
+	border-top: 2px solid #ACB2D6;
+	padding-top: 55px;
+}
+
+.sct_h3 h3:not(.notH3){
+	font-size: 24px;
+	color: #1D3759;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	margin: 46px 0 40px;
+
+}
+
+
+
+.sct_h3 p{
+	line-height: 1.5;
+}
+.sct_h3 p:not(:last-of-type){
+	margin-bottom: 1em;
+}
+
+
+
+.sct_h3 ol li,
+.sct_h3 ul li{
+	list-style-type: inherit;
+}
+.sct_h3 li{
+	margin-left: 1.25em;
+	line-height: 1.3;
+}
+.sct_h3 li:not(:last-of-type){
+	margin-bottom: 0.5em;
+}
+
+
+
+/* ------------------------------ */
+.sct_h4{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	border-top: 1px solid #C9DFF8;
+	border-bottom: 1px solid #C9DFF8;
+}
+
+.sct_h4 h4:not(.notH4){
+	font-size: 1.1em;
+	margin-bottom: 1em;
+}
+
+/*
+180607　消去
+.sct_h4 h4{
+	border-left: 4px solid #5358A5;
+	padding-left: 4px;
+	margin-bottom: 1em;
+}
+*/
+
+/* ------------------------------------------------------------ */
+/* 共通　受託サービス */
+/* ------------------------------------------------------------ */
+/* ------------------------------ */
+/* 共通部　index.html、business.htmlで使用　　2019/03/24 (日) 22:18:17*/
+/* ------------------------------ */
+.sct_buzService{
+	background-color: #E8EAEC;
+	
+	padding-top: 60px;
+	padding-bottom: 65px;
+}
+
+
+
+/* ------------------------------ */
+/* 元共通部　現在index.htmlのみで使用　2019/03/24 (日) 22:17:31　*/
+/* ------------------------------ */
+h3.sct_buzService_h3{
+	color: #1D3759;
+	font-size: 29px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+ul.sct_buzService_ul{
+}
+ul.sct_buzService_ul li{
+	margin-bottom: 35px;
+}
+ul.sct_buzService_ul li:last-of-type{
+	margin-bottom: 0;
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* 共通　table */
+/* ------------------------------------------------------------ */
+table.tbl_01{
+	border-collapse: collapse;
+	width: 100%;
+	line-height: 1.4;
+}
+
+/* ------------------------------ */
+table.tbl_01 tr{
+
+}
+table.tbl_01 tr:nth-of-type(2n+1){
+	background-color: #D8E8FA;
+}
+table.tbl_01 tr:nth-last-of-type(1){
+	border-bottom: 2px solid #D8E8FA;
+}
+
+
+/* ------------------------------ */
+table.tbl_01 tr td{
+	padding: calc((42px - 1em)/2) 2em;
+	vertical-align: top;
+}
+
+table.tbl_01 tr td:nth-of-type(1){
+	text-align: center;
+	padding-left: 2em;
+	padding-right: 0;
+	white-space: nowrap;
+}
+table.tbl_01 tr td:nth-of-type(2){
+	width: 100%;
+}
+
+
+/* ------------------------------ */
+table.tbl_01 tr td hr{
+	margin: 0;
+	padding: 0;
+	height: 0;
+  border: 0;
+	
+	border-bottom: 2px solid #D8E8FA;
+	margin:calc((42px - 1em)/2) calc(-2em);
+}
+
+/* ------------------------------------------------------------ */
+/* 共通　制作中 */
+/* ------------------------------------------------------------ */
+/*
+破棄　2019/03/24 (日) 22:15:33
+.underConstruction{
+	color: #005BAB;
+	text-align: center;
+	line-height: 1.5;
+}
+*/
+
+
+
+/* ------------------------------------------------------------ */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ページ別-1　index.html */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ------------------------------------------------------------ */
+/* aaaaaa */
+/* ------------------------------------------------------------ */
+#sct_idxLead_h2{
+	margin: 0;
+	margin-left: -80px;
+	margin-right: -80px;
+	margin-top: 40px;
+}
+#sct_idxLead_h2 img{
+	width: 100%;
+	height: auto;
+}
+
+/*
+トップページから除外のため、不要　2019/03/24 (日) 21:18:44
+#sct_idxLead_p{
+	background-color: #3365AD;
+	color: #9BCCEE;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1.4;
+	height: 190px;
+	padding: 0 2em;
+}
+*/
+
+
+/* ------------------------------------------------------------ */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ページ別-2　技術紹介 */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* 
+汎用パーツで作成
+*/
+
+
+/* ------------------------------------------------------------ */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ページ別-3　事業概要 */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ------------------------------------------------------------ */
+/* aaaaaa */
+/* ------------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------------ */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ページ別-4　サービス */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ------------------------------------------------------------ */
+/* サービス　共通部 */
+/* ------------------------------------------------------------ */
+.service_sct_h3{
+	background-color: #EEF0F1;
+	border-bottom: 2px solid #CBCBCB;
+	margin-bottom: 50px;
+}
+.service_sct_h3 h3{
+	color: #FFF;
+	font-size: 24px;
+	border-top: 5px solid #CCCCC1;
+	background-color: #AAAAA2;
+	height: 65px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 60px;
+}
+
+.service_sct_h4{
+	margin:0 25px 70px;
+	padding-left: 105px;
+	position: relative;
+}
+.service_sct_h4 h4{
+	font-size: 20px;
+	border-left: 4px solid #CCCCC1;
+	padding-left: 4px;
+	margin-bottom: 8px;
+}
+.service_sct_h4 p.p_icon{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.service_sct_h4 p.p_txt{
+	line-height: 1.5;
+	border-top: 2px solid #FFF;
+	padding-top: 8px;
+}
+
+.service_sct_h3 p.p_btn{
+	background-color: #F8F8F8;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.service_sct_h3 p.p_btn a{
+	color: #FFF;
+	font-size: 19px;
+	text-decoration: none;
+	background-color: #989898;
+	border-bottom: 2px solid #565656;
+	width: 500px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.service_sct_h3 p.p_btn a:hover{
+	background-color: #AAAAA2;
+	border-bottom: 2px solid #CCCCC1;
+	opacity: 0.5;
+}
+
+
+/* ------------------------------ */
+/* 個別職対応 */
+/* ------------------------------ */
+/* ---------- */
+#service_Num1 h3{
+	border-color:#FF6555;
+	background-color: #FF887C;
+}
+
+#service_Num1 h4{
+	border-color:#FF6555;
+}
+
+#service_Num1 p.p_btn a:hover{
+	background-color: #FF887C;
+	border-color:#FF6555;
+}
+
+/* ---------- */
+#service_Num2 h3{
+	border-color:#00C3A7;
+	background-color: #45DCBF;
+}
+
+#service_Num2 h4{
+	border-color:#00C3A7;
+}
+
+#service_Num2 p.p_btn a:hover{
+	background-color: #45DCBF;
+	border-color:#00C3A7;
+}
+
+
+/* ---------- */
+#service_Num3 h3{
+	border-color:#FBA013;
+	background-color: #FCBB56;
+}
+
+#service_Num3 h4{
+	border-color:#FBA013;
+}
+
+#service_Num3 p.p_btn a:hover{
+	background-color: #FCBB56;
+	border-color:#FBA013;
+}
+
+
+/* ---------- */
+#service_Num4 h3{
+	border-color:#E48AB2;
+	background-color: #EA9FBE;
+}
+
+#service_Num4 h4{
+	border-color:#E48AB2;
+}
+
+#service_Num4 p.p_btn a:hover{
+	background-color: #EA9FBE;
+	border-color:#E48AB2;
+}
+
+
+/* 例外対応 */
+#service_Num4 .div_boxW720px{
+	/* margin-left: -105px; */
+	margin-top: 36px;
+	margin-left: -90px;
+	margin-bottom: -30px;
+	width: 720px;
+}
+#service_Num4 .div_boxW720px .p_btn{
+	background-color: #FFF;
+}
+#service_Num4 .div_boxW720px .p_btn a{
+	background-color: #EA9FBE;
+	border-color:#E48AB2;
+}
+ 
+/* ---------- */
+/* ------------------------------------------------------------ */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ページ別-5　会社概要 */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ------------------------------------------------------------ */
+/* 図 */
+/* ------------------------------------------------------------ */
+#company_img1_id{
+	margin: 45px auto 69px;
+	text-align: center;
+}
+
+
+/* ------------------------------------------------------------ */
+/* 沿革 */
+/* ------------------------------------------------------------ */
+#sct_enkaku{
+	background-image: url(../images/company_bg1.jpg);
+	background-size: cover;
+	padding:10px 100px 40px;
+	margin-left: -80px;
+	margin-right: -80px;
+}
+
+#sct_enkaku h3,
+#sct_enkaku table,
+#sct_enkaku table a{
+	color: #FFF;
+	font-weight: normal;
+}
+#sct_enkaku table a{
+	text-decoration: none;
+}
+#sct_enkaku table a:hover{
+	text-decoration: underline;
+}
+
+
+#sct_enkaku h3{
+	 text-align: center;
+	 font-size: 24px;
+	 margin-top: 35px;
+	 margin-bottom: 32px;
+}
+
+
+#sct_enkaku table{
+	line-height: 1.4;
+	border-collapse: collapse;
+}
+#sct_enkaku table tr{
+}
+#sct_enkaku table tr td{
+	vertical-align: top;
+	padding: 0.5em 2em;
+	
+}
+#sct_enkaku table tr td:first-child{
+	border-right: 1px solid #CCC;
+}
+
+
+
+
+
+/* ------------------------------------------------------------ */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ページ別-6　お問合せ */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/*アクセス内にリンク*/
+
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ページ別-7　アクセス */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ------------------------------------------------------------ */
+/* access部 */
+/* ------------------------------------------------------------ */
+#sct_access{
+	
+}
+#sct_access h3.sct_access_h3{
+	font-size: 20px;
+	color: #4D4D4D;
+	border-left: 4px solid #5358A5;
+	padding-left: 0.2em;
+	margin-bottom: 23px;
+}
+
+
+/* ------------------------------ */
+#sct_access .sct_h3_p1{
+	margin-left: calc(4px + 0.2em);
+	margin-bottom: 33px;
+}
+
+#sct_access .sct_h3_map{
+	margin-left:  calc((80px*2)/2*-1);
+	margin-right: calc((80px*2)/2*-1);
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+#sct_access table{
+	border-collapse: collapse;
+	line-height: 1.4;
+}
+#sct_access table tr{
+	border-top: 1px solid #C9DFF8;
+	border-bottom: 1px solid #C9DFF8;
+}
+#sct_access table tr > *{
+	padding: 16px 25px;
+	vertical-align: top;
+}
+#sct_access table tr > th{
+	padding-right: 15px;
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* 元共通　お問い合わせ */
+/* ------------------------------------------------------------ */
+.sct_wFit{
+	background-color: #6397D4;
+	color: #FFF;
+	text-align: center;
+	padding: 58px 0;
+	/*margin-bottom: -95px;*/
+}
+
+/* 臨時fit対応　タブレット用　2019/03/24 (日) 23:14:36 */
+/* モバイル版(iPad横向き以下) 基準幅(デスクトップ用)から手動で-1px*/
+/*
+@media screen and (max-width: 959px){
+	.sct_wFit{
+		margin-right:  calc((960px - 800px)/2*-1);
+		margin-left:   calc((960px - 800px)/2*-1);
+	}
+}
+*/
+
+
+/* モバイル版(iPad横向き以下) 基準幅(デスクトップ用)から手動で-1px*/
+/*
+@media screen and (max-width: 959px){
+	.sct_wFit{
+		background-color: #639;
+		margin-left: -80px;
+		margin-right: -80px;
+	}
+}
+*/
+
+
+
+/* ------------------------------ */
+/*追加　2019/03/24 (日) 22:50:38*/
+#sct_gokeiyaku{
+	border:1px solid #FFF;
+}
+
+
+
+/* デスクトップ用　minを基準幅で */
+@media screen and (min-width: 960px){
+	/* 臨時対応　2019/03/24 (日) 23:24:42 */
+	/* box内が800pxでできているのに、画像が850pxになっている。強引に対応。 */
+	#sct_gokeiyaku p{
+		width: 850px;
+		height: auto;
+
+		margin-right:  calc((50px)/2*-1);
+		margin-left:   calc((50px)/2*-1);
+	}
+}
+
+
+/*追加　2019/03/24 (日) 22:50:38*/
+#anc_otoiawase{
+}
+
+
+/* ------------------------------ */
+.sct_wFit h2.sct_otoiawase_h2{
+	font-size: 24px;
+	margin-bottom: 66px;
+}
+
+
+.sct_wFit p.sct_otoiawase_h2_p1_1{
+	font-size: 20px;
+	line-height:1.7;			/*基本行間　単位は付けない*/
+	margin-bottom: 30px;
+}
+.sct_wFit p.sct_otoiawase_h2_p1_2{
+	font-size: 15px;
+	margin-bottom: 50px;
+}
+.sct_wFit p.sct_otoiawase_h2_p2{
+	border-top: 1px solid #FFF;
+	padding-top: 34px;
+	line-height:1.5;			/*基本行間　単位は付けない*/
+}
+
+
+
+/* ------------------------------ */
+.sct_wFit .sct_otoiawase_h3{
+	margin-bottom: 80px;
+}
+
+.sct_wFit .sct_otoiawase_h3 h3{
+	width: 500px;
+	height: 40px;
+	font-size: 19px;
+	color: #5D77CE;
+	background-color: #DAEAFF;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sct_wFit p.sct_otoiawase_h3_num{
+	margin: 23px auto;
+	font-size: 32px;
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* 追加パーツ */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+#wrapper .addParts_textAlignCenter{
+	text-align:center;
+}
+
+
+/* 例外　technologyで使用 */
+#wrapper .addParts_marginBottom40{
+	margin-bottom: 40px;
+}
+
+
+/* 例外　technologyで使用 */
+#wrapper h3.addParts_bg{
+	color: #FFFFFF;
+	background-color:#76A4D9;
+	height: 62px;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* END */
