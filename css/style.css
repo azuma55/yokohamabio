@@ -471,7 +471,8 @@ table.tbl_01 tr td{
 }
 
 table.tbl_01 tr td:nth-of-type(1){
-	text-align: center;
+	text-align: justify;
+    text-align-last: justify;
 	padding-left: 2em;
 	padding-right: 0;
 	white-space: nowrap;
